@@ -1,0 +1,13 @@
+*.pio
+*.pyc
+*.out
+*.log
+*.vs
+/site
+/build
+/install
+/logs
+/.vscode
+.ipynb_checkpoints
+.idea/
+/venv
