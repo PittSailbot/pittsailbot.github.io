@@ -1,1 +1,1 @@
-# SailBotPitt.github.io
+# pittsailbot.github.io
