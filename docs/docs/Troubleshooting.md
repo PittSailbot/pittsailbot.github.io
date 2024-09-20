@@ -1,4 +1,3 @@
-# Troubleshooting
 This guide helps solve problems related to the boat
 
 ## PCB Main Power
@@ -18,11 +17,46 @@ The batteries are plugged in but nothing is lighting up
 
 
 ## Odrive Setup
-- Unbalanced Phases: This seems to happen with axis1 sometimes, just swap the 3 motor wires (on the actual motor) around so they connect to a different female connector. You may have to try several different options before it works, run the calibration sequence with each try. It is ok to unplug and replug these wires (hotswap) if and only if the motors calibration sequence failed for the axis you are unplugging AND you have not reset the axis using odrv0.clear_errors() 
-- Encoder CPR mismatch: This happens somewhat randomly, make sure the wires are plugged all the way in and the encoders are firmly connected to the motor. Spin the motor a little and make sure there is not too much resistance (if there is spray some wd40 or something) Even still this happens on occasion, just run the calibration again. 
 - These are the only two common errors, if anything else comes up while running the calibration try asking chatGPT for help. 
+
+### Unbalanced Phases
+This seems to happen with axis1 sometimes, just swap the 3 motor wires (on the actual motor) around so they connect to a different female connector. You may have to try several different options before it works, run the calibration sequence with each try. It is ok to unplug and replug these wires (hotswap) if and only if the motors calibration sequence failed for the axis you are unplugging AND you have not reset the axis using odrv0.clear_errors() 
+
+### Encoder CPR mismatch
+This happens somewhat randomly, make sure the wires are plugged all the way in and the encoders are firmly connected to the motor. Spin the motor a little and make sure there is not too much resistance (if there is spray some wd40 or something) Even still this happens on occasion, just run the calibration again. 
 
 
 ## Docker
 - ROS2 colcon build fails
   - docker.py create copies over venv files as well? Causes unrelated packages to be included
+
+
+## No RC Control
+The process for receiving and executing RC is as follows:
+
+- RC controller talks to receiver in the mast
+- Mast receiver is read by teensy over serial (connected by usb-c) in `transceiver.cpp`
+- Teensy publishes controller state to Pi in `main.cpp`
+- Pi publishes controller state to various topics in `transceiver.py`, notably `cmd_rudder` and `cmd_sail`
+- `Motordrivers.py` subscribes to these topics and sets the correct position with `odrive.py`
+
+### Check receiver LED
+The LED should be permanent blue. If it is blue and flashing red, then the controller is either not on or bound incorrectly.
+
+If there is no LED light, then check that the usb-c is plugged into both ends of the mast.
+
+### Force publish to `cmd_rudder`/`cmd_sail`
+Paste `ros2 topic pub --once boat/cmd_rudder std_msgs/Float32 "{data: 30.0}"` in the terminal to see if motorDrivers is reading the topic correctly.
+
+If nothing happens then make sure that the odrive is calibrated using odrivetool following the steps in `Starting the Boat.md`
+
+
+### Check that the teensy is publishing publishing and being read into transceiver.py correctly
+
+
+### Swap out the cable
+The mast only works with usb-c gen 3.2.
+
+
+## Boat loses RC on water
+Seems to happen when the boat either leaves Wi-Fi range or the laptop goes to sleep while the terminal is open and the code is running. Solved by manually killing the terminal after running the boat code.

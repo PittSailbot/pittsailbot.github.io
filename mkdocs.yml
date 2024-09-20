@@ -14,7 +14,9 @@ nav:
     - ROS2: "docs/ROS2.md"
     - Pi Cheat Sheet: "docs/Pi Cheat Sheet.md"
     - Shell Commands: "docs/Shell Commands.md"
+    - IDE Shortcuts: "docs/Shortcuts.md"
   - Starting the Boat: "docs/Starting the Boat.md"
+  - Troubleshooting: "docs/Troubleshooting.md"
   - Workshops:
       - Github: "docs/Github Workshop.md"
   - How to Edit This Site: "docs/How to Edit This Site.md"
