@@ -60,3 +60,8 @@ The mast only works with usb-c gen 3.2.
 
 ## Boat loses RC on water
 Seems to happen when the boat either leaves Wi-Fi range or the laptop goes to sleep while the terminal is open and the code is running. Solved by manually killing the terminal after running the boat code.
+
+## Can't connect to Website
+1. Make sure you are on the same network as the Pi and that you are not trying to access it from a hotspot
+   - Android hotspots seem to have client isolation on by default, preventing peers from connecting to each other (may be possible to disable this)
+2. Try accessing the site locally from the Pi
