@@ -1,11 +1,15 @@
-## Welcome to Pitt Sailbot!
-Howdy! 
+# Welcome to Pitt Sailbot!
+
+Howdy! This is the **Control Team's** documentation site for everything related to the **software and electrical design** of our autonomous sailboat.
+
+---
 
 ## Contributing
 
-Check out the [Getting Started](Getting Started.md) for steps on how to set up your environment to contribute.
+Want to contribute? Check out our **[Getting Started Guide](Getting Started.md)** for step-by-step instructions on setting up your environment.
+
+---
 
 ## Resources
 
-Commonly used resources and commands can be found under the Resources tab.
-
+Looking for commonly used commands or tools? Visit the **[Resources](Resources.md)** tab for quick access to essential information.

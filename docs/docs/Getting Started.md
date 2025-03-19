@@ -35,7 +35,7 @@ Pretty much everything we write is using Python. Its easy to pick up and it has 
 
 > Never used Python before? It's ok! If you're taking CS 0010/CMPINF 0010 you'll get to learn in your classes. If not, here's some [resources](https://automatetheboringstuff.com/) to learn some of the basics if you're willing to put in the time.
 
-> Or, if you just need a refresher or want to see some *cool advanced features* [click here](https://gto76.github.io/python-cheatsheet/).
+> Or, if you just need a refresher or want to see some *cool advanced features* check this [Python cheat sheet](https://gto76.github.io/python-cheatsheet/).
 
 ## Installing Docker
 Docker is used for setting up containers for our code. It's essentially a recipe to build the OS, and all other dependencies necessary to run your code so we can avoid the issue of "well it works on my machine...". Technically, we could skip all of these installation steps if I were to make container for developing, but it balloons compilation times from 5s to over 4 minutes.
@@ -79,3 +79,10 @@ ros2 run sailbot transceiver
 Many features in the code will not work since our virtual environment is lacking real sensors and peripherals that the boat has.
 However, the Docker is very useful for ensuring that your code compiles with ROS2. This lets us to debug compiler errors without having to set the boat up first.
 Individual nodes can be ran with `ros2 run sailbot [node]`. You can view all of our robot's nodes with `ros2 node list`
+
+## Learning our Code
+We have the code for the boat and can run it locally, great! But what exactly do these dozens of files do?
+
+<br />
+
+Next up, we'll dive into our project structure and tooling in our [Code Overview](Code Overview.md)

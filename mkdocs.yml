@@ -9,18 +9,23 @@ repo_name: Pitt Sailbot
 # Website Structure
 nav:
   - Home: "docs/index.md"
-  - Getting Started: "docs/Getting Started.md"
+  - Getting Started: 
+    - Getting Started: "docs/Getting Started.md"
+    - Code Overview: "docs/Code Overview.md"
+  - Starting the Boat:
+    - Starting the Boat: "docs/Starting the Boat.md"
+    - Troubleshooting: "docs/Troubleshooting.md"
   - Resources:
+    - Resources: "docs/Resources.md"
     - ROS2: "docs/ROS2.md"
-    - Pi Cheat Sheet: "docs/Pi Cheat Sheet.md"
-    - Shell Commands: "docs/Shell Commands.md"
-    - IDE Shortcuts: "docs/Shortcuts.md"
     - Git:
       - Learning Git: "docs/Learning Git.md"
       - Workshop: "docs/Github Workshop.md"
-      - Cheat Sheet: "docs/Github Cheat Sheet.md"
-  - Starting the Boat: "docs/Starting the Boat.md"
-  - Troubleshooting: "docs/Troubleshooting.md"
+    - Cheat Sheets:
+      - Shell Commands: "docs/Shell Commands.md"
+      - Git: "docs/Github Cheat Sheet.md"
+      - Pi Cheat Sheet: "docs/Pi Cheat Sheet.md"
+      - IDE Shortcuts: "docs/Shortcuts.md"
   # - Workshops:
   - How to Edit This Site: "docs/How to Edit This Site.md"
 
