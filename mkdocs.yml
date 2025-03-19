@@ -15,11 +15,13 @@ nav:
     - Pi Cheat Sheet: "docs/Pi Cheat Sheet.md"
     - Shell Commands: "docs/Shell Commands.md"
     - IDE Shortcuts: "docs/Shortcuts.md"
-    - Github Cheat Sheet: "docs/Github Cheat Sheet.md"
+    - Git:
+      - Learning Git: "docs/Learning Git.md"
+      - Workshop: "docs/Github Workshop.md"
+      - Cheat Sheet: "docs/Github Cheat Sheet.md"
   - Starting the Boat: "docs/Starting the Boat.md"
   - Troubleshooting: "docs/Troubleshooting.md"
-  - Workshops:
-      - Github: "docs/Github Workshop.md"
+  # - Workshops:
   - How to Edit This Site: "docs/How to Edit This Site.md"
 
 theme:
