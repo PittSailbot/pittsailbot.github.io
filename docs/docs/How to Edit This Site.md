@@ -1,15 +1,14 @@
 Documentation for our site is written using markdown and published through Github pages using mkdocs. If you're unfamiliar with using markdown, check out this handy [cheat sheet](https://www.markdownguide.org/cheat-sheet/).
 
-In depth documentation for mkdocs can be found [here](https://www.mkdocs.org/user-guide/writing-your-docs/). 
+In depth documentation for mkdocs can be found [here](https://www.mkdocs.org/user-guide/writing-your-docs/).
+
+- Google Analytics for our site can also be viewed [here](https://search.google.com/u/2/search-console?resource_id=https://pittsailbot.github.io/)
 
 
 ### Install dependencies
-1. In the terminal, install mkdocs and the mkdocs material theme with:
+1. In the terminal, install dependencies with:
 ```console
-pip install mkdocs
-```
-```console
-pip install mkdocs-material
+pip install -r requirements.txt
 ```
 
 ### Making changes
