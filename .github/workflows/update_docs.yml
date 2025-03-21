@@ -12,16 +12,46 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - name: Build & deploy with mkdocs
+        uses: actions/checkout@v3
+        uses: actions/setup-python@v4
         with:
           python-version: 3.x
-      - uses: actions/cache@v4
+        uses: actions/cache@v4
         with:
           key: ${{ github.ref }}
           path: .cache
-      - run: pip install mkdocs-material
-      - run: pip install pillow cairosvg
-      - run: pip install mkdocs-git-revision-date-localized-plugin
-      - run: mkdocs gh-deploy --force
+        run: pip install mkdocs-material
+        run: pip install pillow cairosvg
+        run: pip install mkdocs-git-revision-date-localized-plugin
+        run: mkdocs gh-deploy --force
+
+      - name: Generate additional_sitemap.xml from static HTML files
+        run: |
+          ADDITIONAL="additional_sitemap.xml"
+          echo '<?xml version="1.0" encoding="UTF-8"?>' > $ADDITIONAL
+          echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> $ADDITIONAL
+
+          # Find all HTML files in the repo (excluding the MkDocs build directory)
+          find . -type f -name "*.html" ! -path "./site/*" | while read file; do
+            URL="https://pittsailbot.github.io/${file#./}"  # Construct the URL
+            URL=$(echo $URL | sed 's/\/\//\//g')     # Fix double slashes
+            echo "  <url><loc>$URL</loc></url>" >> $ADDITIONAL
+          done
+
+          echo '</urlset>' >> $ADDITIONAL
+
+      - name: Merge additional_sitemap.xml into sitemap.xml
+        run: |
+          SITEMAP="site/sitemap.xml"
+          ADDITIONAL="additional_sitemap.xml"
+
+          if [ -f "$SITEMAP" ] && [ -f "$ADDITIONAL" ]; then
+            echo "Merging generated additional_sitemap.xml into sitemap.xml..."
+            sed -i '$d' $SITEMAP  # Remove the closing </urlset> tag
+            tail -n +3 $ADDITIONAL >> $SITEMAP  # Append generated sitemap (skip XML header)
+          else
+            echo "Error: One of the sitemap files is missing!"
+          fi
