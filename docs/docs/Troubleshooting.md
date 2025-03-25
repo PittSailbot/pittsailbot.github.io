@@ -1,67 +1,130 @@
-This guide helps solve problems related to the boat
+# Problems We've Encountered & How to Solve Them  
 
-## PCB Main Power
-The batteries are plugged in but nothing is lighting up
-1. Check the voltage of the plug you are connecting to PCB. It should be >10.8V. If it is not then the batteries are dead or nearly dead and the BMS might be preventing them from being used to prevent damage, you will need to charge the batteries or use different ones. 
+---
 
-2. Some of the deans plugs do not fit correctly together, For example the batteries will not make proper contact with the PCB when plugged in directly. Try using jumper wires to connect the battery to the PCB. **BE VERY CAREFUL!** Switching the Ground and V+ wire could destroy part or all of the PCB. Accidentally touching the battery alligator clips while connecting them to the PCB Could destroy the battery. 
+## No Power on PCB
+**Issue:** The batteries are plugged in but nothing is on
 
-## Wi-Fi Connectivity
-1. Make sure the Wi-Fi router is running and has a green light for the Wi-Fi signal
-2. Make sure your device is connected to the `Pitt Sailbot` Wi-Fi network
-3. Open a browser and type `192.168.8.1` into the address bar. The password is `sailboot`. On the left there should be a tab labeled clients, after clicking on it you should see the clients currently connected. If you've gotten to this point you laptop will definitly be one of the listed devices, you should also see the Pi(s) and their Ip addresses. 
-4. If you do not see the Pi(s) connected unplug the Pi power cable from the PCB (do not turn off the entire PCB, this is the only time you should do this). **Do not unplug the GPIO cable** (The GPIO cable is the wide black cable)
-5. Wait a moment and plug the Pi back in, make sure it has a green light blinking (or steady). If only the red light shows up the is a problem with the Pi. If not light comes up it might not be getting power
-6. If you see the green light on the Pi then give it a little while and try again to connect. 
-    - Sometimes it takes a minute or two for the Pi to show up (or disappear from) clients at `192.168.8.1`
+### Check the battery voltage
+The voltage of the plug connecting to the PCB should be **greater than 10.8V**. If it's lower, the **Battery Management System (BMS)** could be preventing usage to avoid damage. Charge or replace the batteries.
 
+### Check the Deans plugs  
+- Some Deans plugs do not fit properly, causing poor connections.  
+- Directly plugging the battery into the PCB may not work—try using jumper wires instead.  
+- **⚠️ BE VERY CAREFUL!**  
+   - **Swapping the Ground and V+ wires** could destroy the PCB.  
+   - **Accidentally shorting the battery terminals** could destroy the battery.  
 
-## Odrive Setup
-- These are the only two common errors, if anything else comes up while running the calibration try asking chatGPT for help. 
+---
+
+## Wi-Fi Connectivity  
+**Issue:** Unable to connect to the `Pitt Sailbot` Wi-Fi network. Or the Pi is not connected to the router.
+
+1. **Ensure the Wi-Fi router is running**  
+   - The router should have a **green light** indicating Wi-Fi signal.  
+
+2. **Check your connection**  
+   - Make sure your device is connected to **`Pitt Sailbot`**.  
+
+3. **Verify router access**  
+   - Open a browser and enter `192.168.8.1` in the address bar.  
+   - Password: **`sailboot`**  
+   - Click on the **Clients** tab to check connected devices.  
+   - Your device should be listed along with the **Raspberry Pi(s) and their IP addresses**.  
+
+4. **If the Pi is missing from the client list:**  
+   - **Unplug** the Pi’s power cable from the PCB (**do not turn off the entire PCB**).  
+   - **Do NOT unplug the GPIO cable** (wide black cable).  
+   - Wait a few moments, then **plug the Pi back in**.  
+
+5. **Check Pi status:**  
+   - **Green light blinking (or steady)** = Pi is running.  
+   - **Only red light** = Possible Pi issue.  
+   - **No light at all** = The Pi may not be receiving power.  
+
+6. **Wait & retry:**  
+   - Sometimes, it takes a **minute or two** for the Pi to appear at `192.168.8.1`.  
+
+---
+
+## ODrive Setup  
+**Issue:** Errors during calibration.  
 
 ### Unbalanced Phases
-This seems to happen with axis1 sometimes, just swap the 3 motor wires (on the actual motor) around so they connect to a different female connector. You may have to try several different options before it works, run the calibration sequence with each try. It is ok to unplug and replug these wires (hotswap) if and only if the motors calibration sequence failed for the axis you are unplugging AND you have not reset the axis using odrv0.clear_errors() 
+1. Swap the **three motor wires** (on the motor side) to different female connectors.  
+**Hot-swapping** these wires is safe **ONLY IF**:  
+    1. The calibration sequence failed for that axis.  
+    2. You **haven't reset the axis** using `odrv0.clear_errors()`.  
+2. Rerun the calibration after each attempt until error is resolved.
 
-### Encoder CPR mismatch
-This happens somewhat randomly, make sure the wires are plugged all the way in and the encoders are firmly connected to the motor. Spin the motor a little and make sure there is not too much resistance (if there is spray some wd40 or something) Even still this happens on occasion, just run the calibration again. 
+### Encoder CPR Mismatch
+1. Ensure the encoder wires are **fully plugged in**.  
+2. Check that the **encoder is firmly attached to the motor**.  
+3. Spin the motor to check for excessive resistance (apply **WD-40** if needed).  
+4. Rerun the calibration.  
 
+---
 
-## Docker
-- ROS2 colcon build fails
-  - docker.py create copies over venv files as well? Causes unrelated packages to be included
+## Docker  
+**Issue:** ROS2 `colcon build` fails.  
 
+- `docker.py create` might be **copying over `venv` files**, leading to unrelated package issues?
 
-## No RC Control
+---
+
+## No RC Control  
+**Issue**: The RC controller fails to control the boat
+
 The process for receiving and executing RC is as follows:
 
-- RC controller talks to receiver in the mast
-- Mast receiver is read by teensy over serial (connected by usb-c) in `transceiver.cpp`
-- Teensy publishes controller state to Pi in `main.cpp`
-- Pi publishes controller state to various topics in `transceiver.py`, notably `cmd_rudder` and `cmd_sail`
-- `Motordrivers.py` subscribes to these topics and sets the correct position with `odrive.py`
+1. **RC Controller** → Wirelessly signals to **Receiver in the Mast**.  
+2. **Receiver** → Sends data to **Teensy** over Serial using the mast USB-C (`transceiver.cpp`).  
+3. **Teensy** → Publishes controller state to **Pi** (`main.cpp`).  
+4. **Pi** → Publishes controller state to various topics (`transceiver.py`), e.g., `cmd_rudder` & `cmd_sail`.  
+5. **`motordrivers.py`** → Subscribes to topics and sets position using `odrive.py`.  
 
-### Check receiver LED
-The LED should be permanent blue. If it is blue and flashing red, then the controller is either not on or bound incorrectly.
+### Check Receiver LED
+- **Solid blue light** = Normal.  
+- **Blue with flashing red** = Controller is off or incorrectly bound.  
+- **No LED light** = Check if the **USB-C is plugged into both ends of the mast**.  
 
-If there is no LED light, then check that the usb-c is plugged into both ends of the mast.
+### Force Publish to `cmd_rudder` / `cmd_sail`
 
-### Force publish to `cmd_rudder`/`cmd_sail`
-Paste `ros2 topic pub --once boat/cmd_rudder std_msgs/Float32 "{data: 30.0}"` in the terminal to see if motorDrivers is reading the topic correctly.
+Try manually publishing a command in the Pi terminal:  
+```sh
+ros2 topic pub --once boat/cmd_rudder std_msgs/Float32 "{data: 30.0}"
+```
 
-If nothing happens then make sure that the odrive is calibrated using odrivetool following the steps in `Starting the Boat.md`
-
-
-### Check that the teensy is publishing publishing and being read into transceiver.py correctly
-
-
-### Swap out the cable
-The mast only works with usb-c gen 3.2.
+If nothing happens, ensure the [ODrive is calibrated](Starting the Boat.md).
 
 
-## Boat loses RC on water
-Seems to happen when the boat either leaves Wi-Fi range or the laptop goes to sleep while the terminal is open and the code is running. Solved by manually killing the terminal after running the boat code.
+### Check Teensy Output & `transceiver.py`
+Ensure Teensy is publishing and `transceiver.py` is receiving the data correctly.
 
-## Can't connect to Website
-1. Make sure you are on the same network as the Pi and that you are not trying to access it from a hotspot
-   - Android hotspots seem to have client isolation on by default, preventing peers from connecting to each other (may be possible to disable this)
-2. Try accessing the site locally from the Pi
+### Swap out USB-C Cable
+Try flipping the mast cable or replacing with a different USB-C gen 3.2 cable.
+
+---
+
+## Boat Suddenly Loses RC on Water
+**Issue**: RC connection drops when the boat leaves Wi-Fi range or laptop goes to sleep.
+
+Having the boat code running on an open-terminal and exiting wifi-range causes the boat to stop.
+
+### Manually kill the terminal before restarting the boat code
+1. Run the boat code as stated in [Starting the Boat](Starting the Boat.md)
+
+   - Also try running the commands with `nohup`
+  
+2. Close out the terminal on the host side
+
+---
+
+## Can't Connect to SailNet Website
+**Issue**: Unable to access the Pi-hosted site.
+
+### Ensure you are on the same network as the Pi
+
+> Do not use a mobile hotspot (especially Android, which has client isolation enabled by default). If using a hotspot, check if client isolation can be disabled.
+
+### Try accessing the site locally from the Pi
