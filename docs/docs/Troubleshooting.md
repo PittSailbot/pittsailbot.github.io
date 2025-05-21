@@ -15,6 +15,11 @@ The voltage of the plug connecting to the PCB should be **greater than 10.8V**. 
    - **Swapping the Ground and V+ wires** could destroy the PCB.  
    - **Accidentally shorting the battery terminals** could destroy the battery.  
 
+### Check the Fuses
+If there's overly high current on the PCB at any time then the fuses will blow, disconnecting power from part of the board
+- Visually inspect the wire inside the fuse, it should be intact and connecting both sides of the fuse
+- Try a continuity test (wifi signal) using the multimeter, you should hear a beep if they are connected
+  
 ---
 
 ## Wi-Fi Connectivity  
