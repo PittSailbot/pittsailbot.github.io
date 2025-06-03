@@ -26,6 +26,7 @@ nav:
       - Shell Commands: "docs/Shell Commands.md"
       - Git: "docs/Github Cheat Sheet.md"
       - Pi Cheat Sheet: "docs/Pi Cheat Sheet.md"
+      - Teensy Cheat Sheet: "docs/Teensy Cheat Sheet.md"
       - IDE Shortcuts: "docs/Shortcuts.md"
   # - Workshops:
   - How to Edit This Site: "docs/How to Edit This Site.md"
