@@ -2691,3 +2691,50 @@ body.is-menu-visible #menu {
   transform: translateX(0);
   box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.2);
   visibility: visible; }
+/* Horizontal Navigation Styling */
+#header {
+  padding: var(--spacing-md) var(--spacing-md);
+}
+
+.horizontal-nav .nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.horizontal-nav .nav-links li a {
+  text-decoration: none;
+  color: var(--color-text-light);
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  transition: all 0.2s ease-in-out;
+}
+
+.horizontal-nav .nav-links li a:hover {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+/* Mobile Navigation - Show dropdown on smaller screens */
+.mobile-menu-trigger {
+  display: none;
+}
+
+@media screen and (max-width: 980px) {
+  .horizontal-nav {
+    display: none;
+  }
+  
+  .mobile-menu-trigger {
+    display: block;
+  }
+  
+  #menu {
+    display: block !important;
+  }
+}
