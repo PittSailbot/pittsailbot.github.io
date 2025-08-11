@@ -5,6 +5,53 @@
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
+
+/* Site Color Theme */
+:root {
+  /* Colors */
+  --color-primary: #003594;        /* Pitt Blue */
+  --color-primary-light: #1e4fa1;  /* Lighter Pitt Blue */
+  --color-primary-dark: #002461;   /* Darker Pitt Blue */
+  --color-secondary: #ffb91d;      /* Pitt Gold */
+  --color-accent: #00A8E6;         /* Light Blue accent */
+  
+  --color-text-primary: #333333;   /* Dark gray for main text */
+  --color-text-secondary: #666666; /* Medium gray for secondary text */
+  --color-text-light: #ffffff;     /* White text for dark backgrounds */
+  
+  --color-background: #ffffff;     /* White background */
+  --color-background-light: #f8f9fa; /* Light gray background */
+  --color-background-dark: #212529; /* Dark background */
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-xxl: 3rem;     /* 48px */
+  --spacing-xxxl: 4rem;    /* 64px */
+  
+  /* Typography */
+  --font-size-xs: 0.75rem;   /* 12px */
+  --font-size-sm: 0.875rem;  /* 14px */
+  --font-size-base: 1rem;    /* 16px */
+  --font-size-lg: 1.125rem;  /* 18px */
+  --font-size-xl: 1.25rem;   /* 20px */
+  --font-size-xxl: 1.5rem;   /* 24px */
+  --font-size-xxxl: 2rem;    /* 32px */
+  --font-size-jumbo: 3rem;   /* 48px */
+  
+  /* Borders */
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 0.75rem;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
 /* Basic */
 @-ms-viewport {
   width: device-width; }
@@ -222,7 +269,7 @@ input, select, textarea {
   color: #555555; }
 
 a {
-  color: #ffb91d; }
+  color: var(--color-secondary); }
 
 strong, b {
   color: #555555; }
@@ -264,7 +311,7 @@ button,
   -ms-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
   border: 0;
-  border-radius: 4px;
+  border-radius: var(--border-radius-md);
   cursor: pointer;
   display: inline-block;
   font-weight: 600;
@@ -329,41 +376,41 @@ button,
 .button {
   background-color: transparent;
   box-shadow: inset 0 0 0 1px #555555;
-  color: #555555 !important; }
+  color: var(--color-primary) !important; }
   input[type="submit"]:hover,
   input[type="reset"]:hover,
   input[type="button"]:hover,
   button:hover,
   .button:hover {
-    box-shadow: inset 0 0 0 1px #ce1b28;
-    color: #ce1b28 !important; }
+    box-shadow: inset 0 0 0 1px var(--color-primary-dark);
+    color: var(--color-primary) !important; }
     input[type="submit"]:hover:active,
     input[type="reset"]:hover:active,
     input[type="button"]:hover:active,
     button:hover:active,
     .button:hover:active {
-      background-color: rgba(206, 27, 40, 0.25); }
+      background-color: var(--color-primary-dark); }
   input[type="submit"].primary,
   input[type="reset"].primary,
   input[type="button"].primary,
   button.primary,
   .button.primary {
     box-shadow: none;
-    background-color: #ce1b28;
-    color: #ffffff !important; }
+    background-color: var(--color-primary);
+    color: var(--color-text-light) !important; }
     input[type="submit"].primary:hover,
     input[type="reset"].primary:hover,
     input[type="button"].primary:hover,
     button.primary:hover,
     .button.primary:hover {
-      background-color: #e2212f;
+      background-color: var(--color-primary-light);
       box-shadow: none; }
       input[type="submit"].primary:hover:active,
       input[type="reset"].primary:hover:active,
       input[type="button"].primary:hover:active,
       button.primary:hover:active,
       .button.primary:hover:active {
-        background-color: #b71824; }
+        background-color: var(--color-primary-light); }
 
 /* Form */
 form {
