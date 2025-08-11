@@ -2691,6 +2691,71 @@ body.is-menu-visible #menu {
   transform: translateX(0);
   box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.2);
   visibility: visible; }
+
+/* Quick Links Styling */
+.quick-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
+}
+
+.quick-links .btn {
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--border-radius-md);
+  transition: all 0.2s ease-in-out;
+  box-shadow: var(--shadow-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.quick-links .btn i {
+  font-size: 1.2em;
+}
+
+.quick-links .btn:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+@media screen and (min-width: 768px) {
+  .quick-links {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* Team Section Button Styling */
+.highlights section .content header .btn {
+  padding: var(--spacing-lg);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--border-radius-md);
+  transition: all 0.2s ease-in-out;
+  box-shadow: var(--shadow-sm);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  min-width: 180px;
+}
+
+.highlights section .content header .btn i {
+  font-size: 5em;
+}
+
+.highlights section .content header .btn:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
 /* Horizontal Navigation Styling */
 #header {
   padding: var(--spacing-md) var(--spacing-md);
