@@ -33,7 +33,6 @@
 		@include color-list($p);
 		@include color-table($p);
 		@include color-highlights($p);
-		@include color-testimonials($p);
 	}
 
 // Base.
@@ -48,7 +47,6 @@
 	@import 'components/list';
 	@import 'components/table';
 	@import 'components/highlights';
-	@import 'components/testimonials';
 	@import 'components/actions';
 	@import 'components/grid';
 	@import 'components/icon';
