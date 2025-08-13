@@ -28,74 +28,91 @@
 		<!-- Main -->
 			<section id="main" class="wrapper">
 				<div class="inner">
-					<div id="imgs0" class="content">
-						<!--General-->
-						<h3>Our boats</h3>
-						<img src="images/gallery/tree_boats/she_got_the_kids1.jpg" height = "280" style = "padding-right: 10px;">
-						<img src="images/gallery/tree_boats/ship_happens1.jpg" height = "280" style = "padding-right: 10px;">
-						<img src="images/gallery/tree_boats/rc.jpg" height = "280" style = "padding-right: 10px;">
-					</div>
-					<div id="imgs1" class="content">
-						<!--Control-->
-						<br>
-						<h3><a href="tree_control.html">Controls Team</a></h3>
-						<script>
-							for (var i = 4; i >= 1; i--) {
-								var img = document.createElement("img");
-								img.src = `images/gallery/tree_control/${i}.jpg`;
-								img.style = "padding-right: 10px; padding-bottom: 5px;"
-								console.log(`images/image0${i}.jpg`)
-								img.height = "300"
-								var src = document.getElementById("imgs1");
-								src.appendChild(img);}
-						</script>
-					</div>
-					<div id="imgs2" class="content">
-						<!--mech-->
-						<br>
-						<h3><a href="tree_mech.html">Mechanical Team</a></h3>
-						<script>
-							for (var i = 4; i >= 1; i--) {
-								var img = document.createElement("img");
-								img.src = `images/gallery/tree_mech/${i}.jpg`;
-								img.style = "padding-right: 10px; padding-bottom: 5px;"
-								console.log(`images/image0${i}.jpg`)
-								img.height = "300"
-								var src = document.getElementById("imgs2");
-								src.appendChild(img);}
-						</script>
-					</div>
-					<div id="imgs3" class="content">
-						<!--comp-->
-						<br>
-						<h3><a href="tree_comp.html">Competition</a></h3>
-						<script>
-							for (var i = 19; i >= 1; i--) {
-								var img = document.createElement("img");
-								img.src = `images/gallery/tree_comp/${i}.jpg`;
-								img.style = "padding-right: 10px; padding-bottom: 5px;"
-								console.log(`images/image0${i}.jpg`)
-								img.height = "300"
-								var src = document.getElementById("imgs3");
-								src.appendChild(img);}
-						</script>
-					</div>
-					<div id="imgs" class="content">
-						<!--General-->
-						<br>
-						<h3>General Photos</h3>
-						<script>
-							//too annoying to make 'i' dynamic
-							for (var i = 6; i >= 1; i--) {
-								var img = document.createElement("img");
-								img.src = `images/gallery/tree_general/${i}.jpg`;
-								img.style = "padding-right: 10px; padding-bottom: 5px;"
-								console.log(`images/image0${i}.jpg`)
-								img.height = "300"
-								var src = document.getElementById("imgs");
-								src.appendChild(img);}
-						</script>
-					</div>
+					<!-- Our Boats Section -->
+					<section>
+						<header class="special">
+							<h2>Our Boats</h2>
+						</header>
+						<div class="highlights">
+							<section>
+								<div class="content">
+									<header>
+										<h3>Dan Marina (2025-)</h3>
+									</header>
+									<img src="images/gallery/tree_boats/dan_marina.jpg" alt="Dan Marina sailboat" style="width: 100%; max-width: 450px; height: auto;">
+								</div>
+							</section>
+							<section>
+								<div class="content">
+									<header>
+										<h3>She Got the Kids (2023-2024)</h3>
+									</header>
+									<img src="images/gallery/tree_boats/she_got_the_kids1.jpg" alt="She Got the Kids sailboat" style="width: 100%; max-width: 450px; height: auto;;">
+								</div>
+							</section>
+							<section>
+								<div class="content">
+									<header>
+										<h3>Ship Happens (2019-2022)</h3>
+									</header>
+									<img src="images/gallery/tree_boats/ship_happens1.jpg" alt="Ship Happens sailboat" style="width: 100%; max-width: 450px; height: auto;">
+								</div>
+							</section>
+						</div>
+					</section>
+
+					<!-- Team Galleries Section -->
+					<section>
+						<header class="special">
+							<h2>Our Team</h2>
+						</header>
+						<section>
+							<div class="gallery">
+								<!-- Controls Pictures -->
+								<img src="images/gallery/tree_control/4.jpg" alt="Controls team work" style="width: 280px; height: 200px; object-fit: cover;">
+								<img src="images/gallery/tree_control/3.jpg" alt="Controls team work" style="width: 280px; height: 200px; object-fit: cover;">
+								<img src="images/gallery/tree_control/2.jpg" alt="Controls team work" style="width: 280px; height: 200px; object-fit: cover;">
+								<img src="images/gallery/tree_control/1.jpg" alt="Controls team work" style="width: 280px; height: 200px; object-fit: cover;">
+								<!-- Mech Pictures -->
+								<img src="images/gallery/tree_mech/4.jpg" alt="Mechanical team work" style="width: 280px; height: 200px; object-fit: cover;">
+								<img src="images/gallery/tree_mech/3.jpg" alt="Mechanical team work" style="width: 280px; height: 200px; object-fit: cover;">
+								<img src="images/gallery/tree_mech/2.jpg" alt="Mechanical team work" style="width: 280px; height: 200px; object-fit: cover;">
+								<img src="images/gallery/tree_mech/1.jpg" alt="Mechanical team work" style="width: 280px; height: 200px; object-fit: cover;">
+							</div>
+						</section>
+
+						<!-- Competition -->
+						<section>
+							<header>
+								<h3>Competition</h3>
+							</header>
+							<div class="gallery">
+								<img src="images/gallery/tree_comp/19.jpg" alt="Competition photo" style="width: 280px; height: 200px; object-fit: cover;">
+								<img src="images/gallery/tree_comp/18.jpg" alt="Competition photo" style="width: 280px; height: 200px; object-fit: cover;">
+								<img src="images/gallery/tree_comp/17.jpg" alt="Competition photo" style="width: 280px; height: 200px; object-fit: cover;">
+								<img src="images/gallery/tree_comp/16.jpg" alt="Competition photo" style="width: 280px; height: 200px; object-fit: cover;">
+								<img src="images/gallery/tree_comp/15.jpg" alt="Competition photo" style="width: 280px; height: 200px; object-fit: cover;">
+								<img src="images/gallery/tree_comp/14.jpg" alt="Competition photo" style="width: 280px; height: 200px; object-fit: cover;">
+								<img src="images/gallery/tree_comp/13.jpg" alt="Competition photo" style="width: 280px; height: 200px; object-fit: cover;">
+								<img src="images/gallery/tree_comp/12.jpg" alt="Competition photo" style="width: 280px; height: 200px; object-fit: cover;">
+							</div>
+						</section>
+
+						<!-- General Photos -->
+						<section>
+							<header>
+								<h3>General</h3>
+							</header>
+							<div class="gallery">
+								<img src="images/gallery/tree_general/6.jpg" alt="General club photo" style="width: 280px; height: 200px; object-fit: cover;">
+								<img src="images/gallery/tree_general/5.jpg" alt="General club photo" style="width: 280px; height: 200px; object-fit: cover;">
+								<img src="images/gallery/tree_general/4.jpg" alt="General club photo" style="width: 280px; height: 200px; object-fit: cover;">
+								<img src="images/gallery/tree_general/3.jpg" alt="General club photo" style="width: 280px; height: 200px; object-fit: cover;">
+								<img src="images/gallery/tree_general/2.jpg" alt="General club photo" style="width: 280px; height: 200px; object-fit: cover;">
+								<img src="images/gallery/tree_general/1.jpg" alt="General club photo" style="width: 280px; height: 200px; object-fit: cover;">
+							</div>
+						</section>
+					</section>
 				</div>
 			</section>
 

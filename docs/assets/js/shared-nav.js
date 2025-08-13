@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         <li><a href="tree_mech.html">Mechanical Team</a></li>
                         <!-- <li><a href="tree_comp.html">Competition</a></li> -->
                         <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="photos.html">Photos</a></li>
+                        <li><a href="photos.html">Gallery</a></li>
+                        <li><a href="docs/index.html">Docs</a></li>
                     </ul>
                 </nav>
                 <nav class="mobile-menu-trigger">
@@ -29,7 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="tree_mech.html">Mechanical Team</a></li>
                     <!-- <li><a href="tree_comp.html">Competition</a></li> -->
                     <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="photos.html">Photos</a></li>
+                    <li><a href="photos.html">Gallery</a></li>
+                    <li><a href="docs/index.html">Docs</a></li>
                 </ul>
             </nav>
         `;

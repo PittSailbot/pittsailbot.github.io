@@ -2803,3 +2803,22 @@ body.is-menu-visible #menu {
     display: block !important;
   }
 }
+
+/* Photos Page Specific Styles */
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1rem;
+	margin: 2rem 0;
+}
+
+section > section {
+	margin-bottom: 3rem;
+	padding-bottom: 2rem;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+section > section:last-child {
+	border-bottom: none;
+}
