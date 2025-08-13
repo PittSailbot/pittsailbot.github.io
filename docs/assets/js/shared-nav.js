@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 &nbsp;</i>Instagram</a></li>
                                 <li><a href="https://github.com/PittSailbot/SailBot"><i class="fa-brands fa-github" style="color: #ffffff;">
                                 &nbsp;</i>Github</a></li>
-                                <li><a href="https://discord.gg/aXjgDjDAAG"><i class="fa-brands fa-discord" style="color: #ffffff;">
+                                <li><a href="https://discord.gg/ygauxc3Y6h"><i class="fa-brands fa-discord" style="color: #ffffff;">
                                 &nbsp;</i>Discord</a></li>
                             </ul>
                         </section>
