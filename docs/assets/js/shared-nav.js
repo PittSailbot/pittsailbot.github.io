@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <li><a href="index.html">Home</a></li>
                         <li><a href="tree_control.html">Controls Team</a></li>
                         <li><a href="tree_mech.html">Mechanical Team</a></li>
-                        <li><a href="tree_comp.html">Competition</a></li>
+                        <!-- <li><a href="tree_comp.html">Competition</a></li> -->
                         <li><a href="contact.html">Contact Us</a></li>
                         <li><a href="photos.html">Photos</a></li>
                     </ul>
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><a href="index.html">Home</a></li>
                     <li><a href="tree_control.html">Controls Team</a></li>
                     <li><a href="tree_mech.html">Mechanical Team</a></li>
-                    <li><a href="tree_comp.html">Competition</a></li>
+                    <!-- <li><a href="tree_comp.html">Competition</a></li> -->
                     <li><a href="contact.html">Contact Us</a></li>
                     <li><a href="photos.html">Photos</a></li>
                 </ul>
