@@ -1,4 +1,10 @@
-Documentation for our site is written using markdown and published through Github pages using mkdocs. If you're unfamiliar with using markdown, check out this handy [cheat sheet](https://www.markdownguide.org/cheat-sheet/).
+Our site uses separate frameworks for our main landing page and documentation site. pittsailbot.github.io is built using static HTML/JS/CSS and our documentation is built with mkdocs. This provides flexibility for our web-design and ease-of-use for writing documentation.
+
+**Why static and not React/Svelte/X framework?**
+- Our site is not complicated
+- Pure html minimizes dependencies
+
+Documentation is written in markdown and published through Github pages using mkdocs. If you're unfamiliar with using markdown, check out this handy [cheat sheet](https://www.markdownguide.org/cheat-sheet/).
 
 In depth documentation for mkdocs can be found [here](https://www.mkdocs.org/user-guide/writing-your-docs/).
 
