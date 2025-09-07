@@ -16,6 +16,8 @@ nav:
   - Starting the Boat:
     - Starting the Boat: "docs/Starting the Boat.md"
     - Troubleshooting: "docs/Troubleshooting.md"
+  - How to Sail:
+    - How to Sail: "docs/Sailing For Land Lubbers.md"
   - Resources:
     - Resources: "docs/Resources.md"
     - ROS2: "docs/ROS2.md"
