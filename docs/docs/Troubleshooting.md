@@ -70,6 +70,21 @@ If there's overly high current on the PCB at any time then the fuses will blow, 
 
 ---
 
+## Servos
+**Servo's don't move or move erratically**
+1. Try manually blasting PWM with script
+2. Check voltage (servos usually cut out <3V)
+   - Our servos cut out ~3V but usually need 4.8V+
+   - Is the wire long? Check closest to the source of the servo due to voltage drop
+3. Check if the microcontroller has the same ground as the servo (short servo and microcontroller GND)
+4. Check PWM on oscilloscope
+5. Check if the servo has enough power
+   - The Adafruit Servo Driver is too weak to power the rudder, but can power the sail/jib
+     - If so, plug into main PCB
+6. Try another servo
+
+---
+
 ## Docker  
 **Issue:** ROS2 `colcon build` fails.  
 
