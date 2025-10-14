@@ -22,6 +22,7 @@ nav:
     - How to Sail: "docs/Sailing For Land Lubbers.md"
   - Resources:
     - Resources: "docs/Resources.md"
+    - Electronics Datasheets: "docs/Electronics Datasheets.md"
     - ROS2: "docs/ROS2.md"
     - Git:
       - Learning Git: "docs/Learning Git.md"
@@ -29,8 +30,6 @@ nav:
     - Cheat Sheets:
       - Shell Commands: "docs/Shell Commands.md"
       - Git: "docs/Github Cheat Sheet.md"
-      - Pi Cheat Sheet: "docs/Pi Cheat Sheet.md"
-      - Teensy Cheat Sheet: "docs/Teensy Cheat Sheet.md"
       - IDE Shortcuts: "docs/Shortcuts.md"
   # - Workshops:
   - How to Edit This Site: "docs/How to Edit This Site.md"
