@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<!--
+	Industrious by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Pitt Sailbot - Competition</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" type="image/png" href="images/sailbot-logo.png">
+		<script src="https://kit.fontawesome.com/dbf179c885.js" crossorigin="anonymous"></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Shared Navigation Container -->
+		<div id="shared-nav-container"></div>
+
+		<!-- Heading -->
+			<div id="heading" >
+				<h1>Competition</h1>
+			</div>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<div class="content">
+						<!-- Text -->
+							<!-- HEADING -->
+							<h2>Competition</h2>
+							<!-- paragraph -->
+							<!--
+							text variants:
+							<b>bold</b>
+							<strong>strong</strong>
+							<i>italic</i>
+							<em>emphasized</em>
+							<sup>superscript</sup><sub>subscript</sub>
+							<u>underlined</u>
+							<code>code</code>
+							<a href="#">link</a>
+							-->
+							<p>Every Year in summer we compete with other sailbot clubs. We've done two years of compition so far, placing 3rd/4 the first, 3rd/7 the second.</p>
+							<p>Learn more about the event <a href="https://www.sailbot.org" target="_blank">here</a></p>
+					</div>
+					<!-- Photos -->
+					<header class="special">
+						<div id="imgs" class="content">
+							<h2>Photos</h2>
+							<script>
+								//too annoying to make 'i' dynamic
+								for (var i = 14; i >= 1; i--) {
+									var img = document.createElement("img");
+									img.src = `images/gallery/tree_comp/${i}.jpg`;
+									img.style = "padding-right: 10px; padding-bottom: 5px;"
+									console.log(`images/image0${i}.jpg`)
+									img.height = "300"
+									var src = document.getElementById("imgs");
+									src.appendChild(img);}
+							</script>
+							<br>
+							<a href="photos.html">More Photos Here</a>
+						</div>
+					</header>
+				</div>
+			</section>
+
+
+
+
+
+
+
+		<!-- Shared Footer Container -->
+		<div id="shared-footer-container"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/shared-nav.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
