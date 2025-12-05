@@ -137,6 +137,18 @@ Now with PlatformIO, we can upload and monitor code running on the microcontroll
 3. Click 'Upload and Monitor'
    - This can be finnicky on the Pico2. You may need to press the BOOTSEL button or replug the USB.
 
+##### Arduino IDE
+We use PlatformIO for production, but ArduinoIDE can be useful for testing individual files. 
+
+1. Install [ArduinoIDE](https://support.arduino.cc/hc/en-us/articles/360019833020-Download-and-install-Arduino-IDE)
+
+By default, our boards aren't supported so to add them in Arduino IDE:
+2. Go to File > Preferences
+3. Add the board under "Additional boards manager URLs:"
+   - Teensy https://www.pjrc.com/teensy/package_teensy_index.json
+   - Pico 2 https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
+You can add multiple boards by adding a comma to separate URLs (no spaces)
+
 ## Learning our Code
 We have the code for the boat and can run it locally, great! But what exactly do these dozens of files do?
 
