@@ -58,6 +58,8 @@ document.addEventListener('DOMContentLoaded', function() {
                                 &nbsp;</i>Github</a></li>
                                 <li><a href="https://discord.gg/ygauxc3Y6h"><i class="fa-brands fa-discord" style="color: #ffffff;">
                                 &nbsp;</i>Discord</a></li>
+                                <li><a href="https://www.linkedin.com/company/sailbot-pitt/"><i class="fa-brands fa-linkedin-in" style="color: #ffffff;">
+                                &nbsp;</i>LinkedIn</a></li></i>
                             </ul>
                         </section>
                     </div>
