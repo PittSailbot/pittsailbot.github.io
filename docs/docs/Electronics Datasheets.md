@@ -29,3 +29,18 @@ GPIO Pinout - https://pinout.xyz/pinout/pin5_gpio3/
 
 ### [PA1616D](https://www.adafruit.com/product/5440?srsltid=AfmBOopXcYDTFhlJwI735ZRyzAvRpfTvtQNbrKARvFrerH5Niokt2STg)
 
+
+## Transceiver
+
+### [FRSKY X9 Lite](https://www.getfpv.com/radios/receivers/frsky-r-xsr-2-4ghz-16ch-accst-micro-receiver-w-s-bus-cppm.html)
+
+
+## Servos
+
+### [Dan Marina Sails](https://www.servocity.com/2000-series-5-turn-dual-mode-servo-25-2-torque/)
+
+### [Dan Marina Rudder](https://www.servocity.com/d845wp-servo/?sku=3684500)
+
+### [Mini Boat Sails](https://radiosailing.net/collections/dragonforce-65-v6-replacement-parts/products/sail-winch-servo-set-df65)
+
+### [Mini Boat Rudder](https://radiosailing.net/collections/dragonforce-65-v6-replacement-parts/products/new-digital-metal-gear-rudder-servo_2025)
