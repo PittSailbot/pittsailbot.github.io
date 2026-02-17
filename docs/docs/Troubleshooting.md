@@ -148,3 +148,15 @@ Having the boat code running on an open-terminal and exiting wifi-range causes t
 > Do not use a mobile hotspot (especially Android, which has client isolation enabled by default). If using a hotspot, check if client isolation can be disabled.
 
 ### Try accessing the site locally from the Pi
+
+## Pico 2 USB Device Malfunctioned
+1. Hold the BOOTSEL button and then plug into the USB-A port
+
+## Pico 2 doesn't flash
+Unfortunately this is a relatively common issue. Windows drivers are very inconsistent.
+1. Check Device Manager for 'RP2350 Boot' under Ports
+   - If it is not there, check that the micro-usb cable supports data and that the pico 2 isn't fried
+2. Make sure the Pico 2 drivers are set to WinUSB with [Zadig](https://zadig.akeo.ie)
+   - If it still doesn't work, try replacing with USBSerial drivers then replacing again with WinUSB
+   - Can also try force uninstalling drivers in Device Manager
+3. If nothing else works (switch to Linux or something idk)
