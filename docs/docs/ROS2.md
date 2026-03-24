@@ -32,6 +32,8 @@ https://app.theconstructsim.com/
 ### Common Shell Commands
 **Publish to a topic** `ros2 topic pub --once boat/cmd_rudder std_msgs/Float32 "{data: 30.0}"`
 
+**Subscribe to a topic** `ros2 topic echo /imu
+
 **Run with file args** `ros2 run sailbot dummyevent --ros-args --params-file ./config/params_eventDefaults.yaml`
 
 **Run with commandline args** `ros2 launch sailbot event_launch.launch.py executable:=dummyEvent`
