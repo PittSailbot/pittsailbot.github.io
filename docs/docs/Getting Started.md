@@ -102,11 +102,24 @@ We're almost there! Now that we have a docker container running, we can compile 
 ```
 - Every time you change the source, code you'll run this bash file to compile the changes.
 
-7\. Lastly, we can run any of the ROS2 nodes like so:
+7\. Now we can run any of the ROS2 nodes like so:
 ```console
 ros2 run sailbot transceiver
 ```
 - This should fail with the following exception `Exception: No connected devices found`. That's ok, because our computer doesn't have an RC transceiver!
+
+8\. Now, connect the microcontroller over USB-A to your device
+Install usbipd for windows with `winget install usbipd`
+  - This will allow your docker container to read the data coming from the microcontroller
+Run `usbipd list`. This will display all USB devices on your computer.
+Run `usbipd bind --busid=<BUSID>  # Example: usbipd bind --busid=1-2`
+Run `usbipd attach --wsl --busid=<BUSID>` - has to be done anytime the device reconnects
+  - May need to rebuild the VSCode devcontainer
+Run `ls -l /dev/ttyUSB* /dev/ttyACM*` in the devcontainer. It should show the following on at least one device:
+ls: cannot access '/dev/ttyUSB*': No such file or directory
+crw-rw---- 1 root dialout 166, 0 Mar 24 02:07  /dev/ttyACM0
+
+9\.Re-run the transceiver node. It should now be reading the data coming from the microcontroller.
 
 Many features in the code will not work since our virtual environment is lacking real sensors and peripherals that the boat has.
 However, the Docker is very useful for ensuring that your code compiles with ROS2. This lets us to debug compiler errors without having to set the boat up first.
