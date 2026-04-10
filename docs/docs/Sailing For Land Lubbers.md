@@ -9,6 +9,7 @@ but look at this cool graph
 ## TLDR
 
 - Boat can't sail straight upwind, so you must sail diagonally and swap sides to zig-zag where you want to go
+- When the sail starts luffing, trim the sail in more
 
 **When tacking (upwind)**:
 
