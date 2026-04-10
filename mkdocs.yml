@@ -24,9 +24,7 @@ nav:
     - Resources: "docs/Resources.md"
     - Electronics Datasheets: "docs/Electronics Datasheets.md"
     - ROS2: "docs/ROS2.md"
-    - Git:
-      - Learning Git: "docs/Learning Git.md"
-      - Workshop: "docs/Github Workshop.md"
+    - Git: "docs/Learning Git.md"
     - Cheat Sheets:
       - Shell Commands: "docs/Shell Commands.md"
       - Git: "docs/Github Cheat Sheet.md"
