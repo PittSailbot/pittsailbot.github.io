@@ -30,7 +30,8 @@ Video: https://www.youtube.com/@RoboticsBackEnd/playlists
 https://app.theconstructsim.com/
 
 ### Common Shell Commands
-**Publish to a topic** `ros2 topic pub --once boat/cmd_rudder std_msgs/Float32 "{data: 30.0}"`
+**Publish to a topic** `ros2 topic pub --once /cmd_rudder std_msgs/Float32 "{data: 30.0}"`
+    - `ros2 topic pub --once /next_gps std_msgs/msg/String "data: '{\"lat\": 42.849135, \"lon\": -70.966314}'"`
 
 **Subscribe to a topic** `ros2 topic echo /imu
 
