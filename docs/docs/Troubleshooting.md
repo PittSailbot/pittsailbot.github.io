@@ -149,6 +149,10 @@ Having the boat code running on an open-terminal and exiting wifi-range causes t
 
 ### Try accessing the site locally from the Pi
 
+### localhost did not send any data
+This may be from your SSL keys for HTTPS being incorrect or out of date. Regenerate those with this command here:
+`openssl req -x509 -newkey rsa:4096 -nodes -out cert.pem -keyout key.pem -days 365`
+
 ## Pico 2 USB Device Malfunctioned
 This usually happens when your code causes the Pico 2 to crash during runtime.
 1. Hold the BOOTSEL button and then plug into the USB-A port
