@@ -35,6 +35,6 @@ To preview the documentation site before pushing changes to github:
 
 1. In the terminal, run:
 ```console
-mkdocs serve
+python -m mkdocs serve
 ```
-2. In any web browser navigate to 127.0.0.1:8000
+1. In any web browser navigate to 127.0.0.1:8000
