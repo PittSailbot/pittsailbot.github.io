@@ -3,6 +3,7 @@
 *.out
 *.log
 *.vs
+*.bkp
 /site
 /build
 /install
