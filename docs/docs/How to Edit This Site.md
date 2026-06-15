@@ -1,6 +1,7 @@
-Our site uses separate frameworks for our main landing page and documentation site. pittsailbot.github.io is built using static HTML/JS/CSS and our documentation is built with mkdocs. This provides flexibility for our web-design and ease-of-use for writing documentation.
+Our site uses separate frameworks for our main landing page and documentation site. `pittsailbot.github.io` is built using static HTML/JS/CSS and our documentation is built with mkdocs. This provides flexibility for our web-design and ease-of-use for writing documentation.
 
 **Why static and not React/Svelte/X framework?**
+
 - Our site is not complicated
 - Pure html minimizes dependencies
 
