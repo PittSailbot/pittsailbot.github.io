@@ -13,11 +13,11 @@ The green p3022 encoder is directional and must be oriented in-line with the boa
 2. Rotate the encoder shaft so the flat section lines up with the single screwhole
 3. Attach the windvane on top of the shaft with the front aligned the flat section (0/360° should indicate being in irons)
 
-### IMU
+#### IMU
 The BNO055 IMU is also directional!
 
-1. Align the y-silkscreen arrow with the front center of the bow
-      - If this cannot be done, then offset the angles in software so that 0/360° matches with the boat facing North.
+1. Assuming no offsets, the 0°-point aligns with the y-silkscreen axis forward. Align this side with the center bow-line of the boat.
+   - If this cannot be done, then offset the angles in software so that 0/360° matches with the boat facing North.
 
 ### Wiring
 These components are relatively straightforward and just need to be plugged into the right connectors.
@@ -38,29 +38,30 @@ These components are relatively straightforward and just need to be plugged into
 6. Slot the GPS into the left header
 7. Slot the IMU into the right header
 8. Daisy chain the JST-SH cable between the GPS and IMU
-9.  Plug in the battery to the XT60
-   - Can handle 7.6-60V (in theory) ideally 12.6V
+9. Plug in the battery to the XT60
+     - Can handle 7.6-60V (in theory) ideally 12.6V
 
 
 ## Hot Start
 All components are plugged in and the boat just needs to be powered on.
 
-## Calibrate the IMU
+### Calibrate the IMU
 Every time the boat is powered on, the BNO055 IMU must be calibrated before it will be accurate.
 
 - Magnetometer: Move the sensor in a figure-8 pattern until it begins reading values. 
 - Gyroscope: Leave the sensor still for a few seconds
 - Accelerometer: Should calibrate automatically after a second.
 
-## Run ROS2
+### Run ROS2
 1. Connect your laptop to the `Sailnet 2.4G` Wi-Fi access point or your own hotspot.
     - Password is `PittSailbot`, admin for router is `Sailbot` and can be accessed at `192.168.8.1`
     - (Optional) Make sure everything is working up to this point by following the first 3 steps in [Wifi Connectivity](Troubleshooting.md Wi-Fi Connectivity)
 2. On your laptop open a terminal.
-3. SSH into the Pi using the powershell window. The command looks like this: `ssh <user>@<Ip address>`
+3. SSH into the Pi. The command looks like this: `ssh <user>@<Ip address>`
     - The following are subject to change:
-    - Pi5: `ssh sailbot@192.168.8.11`
-    - Pi5: `ssh pi@192.168.8.12`
+    - The usernames for the two Pi5s are sailbot or pi
+    - You can also use our [tailnet](https://login.tailscale.com/admin/machines) to connect to the Pi5 on any two networks so long as both can access the internet  (ex. 2 phone hotspots)
+    - Pi5: `ssh <user>@<ip>` or `ssh <user>@<tailnet-machine-name>`
     - The passwords for both are `sailbot`
     - If the Pi doesn't connect to a phone hotspot or our router then you'll need to connect a monitor and keyboard to the pi.
 4. Run the Docker container
@@ -70,13 +71,13 @@ python3 ./utils/docker.py run
 # you should now be in a docker terminal and see /workspace# to the left of your cursor, if not look for error messages
 # you can type "exit" to leave the docker terminal and return to your normal terminal if you need to. 
 ```
+- Note: You can use `tmux` to host the terminal on the Pi5. This will prevent the ssh session from being destroyed if your computer disconnects from the Pi5. 
+
 5. Compile ROS2
 ```bash
 . compileDocker.sh
 ```
 6. Run the relevant ROS2 nodes
-- Note: If your PC or the Pi5 lose connection at *any* time, the code will stop. To avoid this, run these commands with `nohup` to continue running these nodes in the background.
-
 `ros2 launch sailbot boat_all.launch`
 
 OR alternatively, run the specific nodes you want directly:
@@ -93,6 +94,6 @@ Replace the Pi5 by running the ROS2 autonomy stack on any Windows device.
 3. Ctrl + Shift + P > Rebuild & Reopen in Container
 4. Run `. compileDocker.sh` to compile ROS2
 5. Run the relevant nodes:
-   - mcu_bridge
-   - navigation
-   - website
+     - mcu_bridge
+     - navigation
+     - website
