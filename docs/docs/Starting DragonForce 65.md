@@ -23,6 +23,6 @@ Relevant FS-IA6B Controls:
 
 
 ## Set Up
-1. Plug the Power and GND into V+ and GND on the FS-IA6B Receiver
+1. Plug the Power and GND into V+ and GND on the FS-IA6B Receiver B/VCC (middle and bottom pin)
 2. Plug the sail into CH3 (SIGNAL facing up)
 3. Plug the rudder into CH1 (SIGNAL facing up)
