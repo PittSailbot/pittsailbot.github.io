@@ -2,18 +2,22 @@
 
 The official website of Pitt students for the **Fully Autonomous Sailboat** competition.
 
-Subtitle Choice 1:
-At Sailbot, all sailors have a hands-on opportunity to participate in autonomous ship building. 
+## Context of this README
+The README is written in Oct. 2, 2026. Aaron (Gan) is creator and only contributor of the website repository. He did not left any README documentation. 
+This repo is now under maintenance of the current club member as Aaron left for career, whoever maintain this repo please left a comment.
+(Kevin created this README file in order to facilitate the reading of Aaron's code.)
 
-Subtitle Choice 2:
-SailBot is a project-based club for Pitt students that competes in the annual International Robotic Sailing Competition.
+## About Us
 
-Introduction paragraph
+SailBot is a project-based club for Pitt students that competes in the annual International Robotic Sailing Competition. At Sailbot, all sailors have a hands-on opportunity to participate in autonomous ship building. 
 
-This README was written for the website maintainer in Oct. 2026. The builder of the website was Aaron. He left no README for people after him.
+## Contributor expectations
+1. Contributors are expect to have basic web dev experience in order to, update content, conduct maintenance.
+2. Contributor **MUST** contact with *Sailbot Control Team's Lead* in order to conduct major changes to the repository.
+
+## Known issues
 
 ## The website covers 
-
 1. Purpose of the Club
 2. Skills we teach.
 3. About us
@@ -21,25 +25,4 @@ This README was written for the website maintainer in Oct. 2026. The builder of 
 5. Gallery
 6. Docs
 
-
-Sponsorship:
-Undecided
-
-
-In summary...
-## You should join Sailbot!
-
-
-
- Outline 
-
-Diagram or video (optional)
-Installation instructions for users
-Installation instructions for developers
-Contributor expectations
-Known issues
-Beg for money 😉 
-
-
-
-©️Markdown by Kevin
+©️Markdown by Kevin Li
