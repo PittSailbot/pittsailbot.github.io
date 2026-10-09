@@ -53,9 +53,39 @@
 							<h2>Photos</h2>
 							<script>
 								//too annoying to make 'i' dynamic
-								for (var i = 14; i >= 1; i--) {
+								// iteration through images that is ONLY listed as 1.jpg, 2.jpg, 3.jpg, etc. up to n.jpg
+								// NOT ideal for Kevin's photos😠!
+								for (var i = 19; i >= 1; i--) {
 									var img = document.createElement("img");
 									img.src = `images/gallery/tree_comp/${i}.jpg`;
+									img.style = "padding-right: 10px; padding-bottom: 5px;"
+									console.log(`images/image0${i}.jpg`)
+									img.height = "300"
+									var src = document.getElementById("imgs");
+									src.appendChild(img);}
+							</script>
+							<p>----------------------------------------------------------------------------------------------------------------------</p>
+							<script>
+								//too annoying to make 'i' dynamic
+								// iteration through images that is ONLY listed as 1.jpg, 2.jpg, 3.jpg, etc. up to n.jpg
+								// NOT ideal for Kevin's photos😠!
+								for (var i = 10; i >= 1; i--) {
+									var img = document.createElement("img");
+									img.src = `images/gallery/tree_comp/2025/${i}.jpg`;
+									img.style = "padding-right: 10px; padding-bottom: 5px;"
+									console.log(`images/image0${i}.jpg`)
+									img.height = "300"
+									var src = document.getElementById("imgs");
+									src.appendChild(img);}
+							</script>
+							<p>----------------------------------------------------------------------------------------------------------------------</p>
+							<script>
+								//too annoying to make 'i' dynamic
+								// iteration through images that is ONLY listed as 1.jpg, 2.jpg, 3.jpg, etc. up to n.jpg
+								// NOT ideal for Kevin's photos😠!
+								for (var i = 9; i >= 1; i--) {
+									var img = document.createElement("img");
+									img.src = `images/gallery/tree_comp/2026/${i}.jpg`;
 									img.style = "padding-right: 10px; padding-bottom: 5px;"
 									console.log(`images/image0${i}.jpg`)
 									img.height = "300"
