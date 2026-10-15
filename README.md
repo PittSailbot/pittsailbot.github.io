@@ -15,8 +15,6 @@ SailBot is a project-based club for Pitt students that competes in the annual In
 1. Contributors are expect to have basic web dev experience in order to, update content, conduct maintenance.
 2. Contributor **MUST** contact with *Sailbot Control Team's Lead* in order to conduct major changes to the repository.
 
-## Known issues
-
 ## The website covers 
 1. Purpose of the Club
 2. Skills we teach.
@@ -24,5 +22,24 @@ SailBot is a project-based club for Pitt students that competes in the annual In
 4. Contact information
 5. Gallery
 6. Docs
+
+## Docs for developing the website
+
+## Current understanding by Kevin as of 10/15/2026
+
+### Structure
+docs
+    ---assets
+        ---css
+        ---fonts
+        ---js
+        ---sass
+    ---docs
+        Essentially ALL the tech docs for nerds listed in the website
+    ---images
+        Images added by Kevin
+        ---galleryAddedByKevin
+            This is the images added by Kevin
+    webpages
 
 ©️Markdown by Kevin Li
