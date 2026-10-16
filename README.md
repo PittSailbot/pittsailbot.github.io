@@ -28,18 +28,15 @@ SailBot is a project-based club for Pitt students that competes in the annual In
 ## Current understanding by Kevin as of 10/15/2026
 
 ### Structure
-docs
-    ---assets
-        ---css
-        ---fonts
-        ---js
-        ---sass
-    ---docs
-        Essentially ALL the tech docs for nerds listed in the website
-    ---images
-        Images added by Kevin
-        ---galleryAddedByKevin
-            This is the images added by Kevin
-    webpages
+```docs/
+├── assets/
+│   ├── css/
+│   ├── fonts/
+│   ├── js/
+│   └── sass/
+├── docs/                         # Essentially ALL the tech docs for nerds listed on the website
+├── images/                       # Images added by Aaron
+│   └── galleryAddedByKevin/      # This is the images added by Kevin
+└── webpages/                     # HTML webpages```
 
 ©️Markdown by Kevin Li
