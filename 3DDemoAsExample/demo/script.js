@@ -3,5 +3,5 @@ const loader = new GLTFLoader();
 const dracoLoader = new DRACOLoader();
 dracoLoader.setDecoderPath( '3DDemoAsExample/demo/draco/' );
 loader.setDRACOLoader( dracoLoader );
-const gltf = await loader.loadAsync( 'models/gltf/duck/duck.gltf' );
+const gltf = await loader.loadAsync( '3DDemoAsExample/demo/sailboat.glb' );
 scene.add( gltf.scene );
