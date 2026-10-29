@@ -9,7 +9,7 @@ scene.background = new THREE.Color(0x888888);
 
 // 加载 STL 模型
 const loader = new STLLoader();
-const geometry = await loader.loadAsync( './FullAssem.STL' )
+const geometry = await loader.loadAsync( 'assets/demo/FullAssem.STL' )
 const material = new THREE.MeshStandardMaterial( { color: 0x0000FF } );
 const mesh = new THREE.Mesh( geometry, material );
 scene.add( mesh );
@@ -33,8 +33,8 @@ scene.add( camera );
 
 // 渲染器
 const renderer = new THREE.WebGLRenderer();
-renderer.setSize( 1920, 1080 );
-document.body.appendChild( renderer.domElement );
+renderer.setSize( 640, 480 );
+document.getElementById('demo-container').appendChild(renderer.domElement); // Credit: ChatGPT Codex GPT-6.1 Sol Light
 
 // Orbital controls, credit: https://threejs.org/docs/?q=OrbitControls#OrbitControls
 const controls = new OrbitControls( camera, renderer.domElement );
